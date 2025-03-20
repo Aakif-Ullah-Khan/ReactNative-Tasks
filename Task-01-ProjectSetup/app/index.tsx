@@ -1,25 +1,10 @@
-import { Text, View } from "react-native";
+import { View, Text } from "react-native";
 
-export default function Index() {
+export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text
-        style={{
-          fontSize: 20,
-          backgroundColor: "red",
-          padding: 10,
-          borderRadius: 10,
-          color: "white",
-          textAlign: "center",
-        }}
-      >
-        Aakif Ullah Khan
+    <View className="flex-1 items-center justify-center bg-blue-500">
+      <Text className="text-white text-2xl font-bold">
+        Hello, React Native!
       </Text>
     </View>
   );
