@@ -1,16 +1,22 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Dimensions } from "react-native";
 import React from "react";
 import CustomBtn from "@/components/customBtn";
 import { router } from "expo-router";
 
 const Home = () => {
-  const handleonPress = () => {
+  const chat = () => {
     router.push("/chat");
   };
+  const profile = () => {
+    router.push("/profile");
+  };
   return (
-    <View className="flex-1 items-center justify-center">
+    <View className="flex-1 justify-center items-center">
       <Text>Home</Text>
-      <CustomBtn btnText="Go to Chat" onPress={handleonPress} />
+      <View className="w-full flex-col justify-between items-center gap-2">
+        <CustomBtn btnText="Go to Chat" onPress={chat} />
+        <CustomBtn btnText="Go to profile" onPress={profile} />
+      </View>
     </View>
   );
 };
